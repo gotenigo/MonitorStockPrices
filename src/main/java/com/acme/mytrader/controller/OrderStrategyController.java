@@ -12,14 +12,14 @@ import org.springframework.http.ResponseEntity;
 import javax.validation.Valid;
 import java.net.URISyntaxException;
 import java.util.List;
-○
+
 @Slf4j
 @RestController
 @RequestMapping(path="/orderStrategy" , produces = { "application/json" } ) // Force the output format to JSON. ALso help to workaround issue with the some browser that does not specify the Media TYpe on GET
 public class OrderStrategyController {
 
 
-    // using the  Cart service + CarResourceAssembler to publish data
+    // using the  OrderStrategyService to publish data
     private final OrderStrategyService orderStrategyService;
 
     public OrderStrategyController(OrderStrategyService orderStrategyService) {
