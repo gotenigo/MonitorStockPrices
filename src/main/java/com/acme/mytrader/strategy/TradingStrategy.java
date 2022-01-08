@@ -71,13 +71,9 @@ public  final class TradingStrategy implements PriceListener {
                 log.info("Alert ! Price level reached for  Id "+orderStrategy.getId()+" -StrategyName="+orderStrategy.getStrategyName());
 
                 if (side == Side.BUY) {
-
                     executionService.buy(stock,price, volume);  // ********   BUY executed automatically
-
                 }else if (side == Side.SELL) {
-
                     executionService.sell(stock,price, volume); /// ********  SELL executed automatically
-
                 }else{
                     log.error(" BAD SETUP ! Your cant have TradingStrategy without Side. Please check the Side ! ");
                 }
