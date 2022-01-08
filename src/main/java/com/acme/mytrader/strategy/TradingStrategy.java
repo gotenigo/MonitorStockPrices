@@ -77,9 +77,7 @@ public  final class TradingStrategy implements PriceListener {
                     case SELL :
                         executionService.sell(stock,price, volume); /// ********  SELL executed automatically
                         break;
-
                 }
-
             }else{
                 log.info("Keep cool, price alert Id "+orderStrategy.getId()+" -StrategyName="+orderStrategy.getStrategyName()+" criteria not met yet");
             }
